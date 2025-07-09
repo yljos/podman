@@ -1,0 +1,24 @@
+[Container]
+Image=docker.io/library/python:3
+# 工作目录
+WorkingDir=/usr/src/myapp
+# 环境变量
+Environment=PUID=1000
+Environment=PGID=1000
+Environment=TZ=Asia/Shanghai
+# 端口映射
+PublishPort=5008:5008
+# 卷挂载
+Volume=/mnt/user/data/www:/usr/src/myapp:Z
+# 启动命令 - 安装依赖并运行应用
+Exec=sh -c "pip install -r requirements.txt && python app.py"
+# 交互式和TTY支持
+AddCapability=SYS_TTY_CONFIG
+Terminal=true
+
+[Service]
+# 重启策略
+Restart=unless-stopped
+# 可选：添加 systemd 依赖控制
+Wants=network-online.target
+After=network-online.target

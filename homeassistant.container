@@ -1,0 +1,22 @@
+[Container]
+Image=ghcr.io/home-assistant/home-assistant:stable
+# 环境变量
+Environment=TZ=Asia/Shanghai
+# 端口映射
+PublishPort=8123:8123
+PublishPort=1900:1900/udp
+PublishPort=5353:5353/udp
+# 卷挂载
+Volume=/mnt/user/data/appdata/homeassistant:/config:Z
+Volume=/etc/localtime:/etc/localtime:ro
+# D-Bus集成，用于系统硬件访问和蓝牙支持
+# Volume=/run/dbus:/run/dbus:ro
+# HomeKit 端口映射（如果启用Apple HomeKit集成）
+# PublishPort=51827:51827
+
+[Service]
+# 重启策略
+Restart=unless-stopped
+# 可选：添加 systemd 依赖控制
+Wants=network-online.target
+After=network-online.target

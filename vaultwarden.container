@@ -1,17 +1,13 @@
 [Container]
-Image=docker.io/emby/embyserver:latest
+Image=docker.io/vaultwarden/server:latest
 # 环境变量
 Environment=PUID=1000
 Environment=PGID=1000
 Environment=TZ=Asia/Shanghai
 # 端口映射
-PublishPort=8096:8096
-PublishPort=7359:7359/udp
+PublishPort=8181:80
 # 卷挂载
-Volume=/mnt/user/data/appdata/emby:/config:Z
-Volume=/mnt/user/data/Downloads/media:/data:z
-# 设备映射（用于硬件加速）
-AddDevice=/dev/dri:/dev/dri
+Volume=/mnt/user/data/appdata/vaultwarden:/data:Z
 
 [Service]
 # 重启策略

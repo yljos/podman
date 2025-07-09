@@ -1,0 +1,16 @@
+[Container]
+Image=docker.io/hacdias/webdav:latest
+# 环境变量
+Environment=WEBDAV_CONFIG=/config.yaml
+# 端口映射
+PublishPort=6065:6065
+# 卷挂载
+Volume=/mnt/user/data/www/webdav:/srv:Z
+Volume=/mnt/user/data/appdata/webdav/config.yaml:/config.yaml:Z
+
+[Service]
+# 重启策略
+Restart=unless-stopped
+# 可选：添加 systemd 依赖控制
+Wants=network-online.target
+After=network-online.target

@@ -1,17 +1,16 @@
 [Container]
-Image=docker.io/emby/embyserver:latest
+Image=lscr.io/linuxserver/calibre-web:latest
 # 环境变量
 Environment=PUID=1000
 Environment=PGID=1000
 Environment=TZ=Asia/Shanghai
+Environment=DOCKER_MODS=linuxserver/mods:universal-calibre
+Environment=OAUTHLIB_RELAX_TOKEN_SCOPE=1
 # 端口映射
-PublishPort=8096:8096
-PublishPort=7359:7359/udp
+PublishPort=8083:8083
 # 卷挂载
-Volume=/mnt/user/data/appdata/emby:/config:Z
-Volume=/mnt/user/data/Downloads/media:/data:z
-# 设备映射（用于硬件加速）
-AddDevice=/dev/dri:/dev/dri
+Volume=/mnt/user/data/appdata/calibre-web:/config:Z
+Volume=/mnt/user/data/books:/books:Z
 
 [Service]
 # 重启策略
