@@ -1,4 +1,5 @@
 [Container]
+# 使用自定义镜像或直接运行 Python 应用
 Image=docker.io/library/python:3
 # 工作目录
 WorkingDir=/usr/src/myapp
@@ -8,13 +9,11 @@ Environment=PGID=1000
 Environment=TZ=Asia/Shanghai
 # 端口映射
 PublishPort=5008:5008
-# 卷挂载
-Volume=/mnt/user/data/www:/usr/src/myapp:Z
-# 启动命令 - 安装依赖并运行应用
-Exec=sh -c "pip install -r requirements.txt && python app.py"
-# 交互式和TTY支持
-AddCapability=SYS_TTY_CONFIG
-Terminal=true
+# 卷挂载 - 修正 SELinux 标签
+Volume=/mnt/user/data/www:/usr/src/myapp:z
+# 启动命令 - 使用启动脚本
+Command=sh
+Exec=start.sh
 
 [Service]
 # 重启策略
