@@ -12,10 +12,10 @@ Volume=/mnt/user/data/appdata/emby:/config:Z
 Volume=/mnt/user/data/Downloads/media:/data:z
 # 设备映射（用于硬件加速）
 AddDevice=/dev/dri:/dev/dri
-# 重启策略
 
 [Service]
-# 可选：添加 systemd 依赖控制
+# 重启策略
 Restart=on-failure
+# 可选：添加 systemd 依赖控制
 Wants=network-online.target
 After=network-online.target
