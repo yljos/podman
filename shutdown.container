@@ -22,3 +22,6 @@ Restart=unless-stopped
 # 可选：添加 systemd 依赖控制
 Wants=network-online.target
 After=network-online.target
+[Install]
+# 开机自启动
+WantedBy=default.target
