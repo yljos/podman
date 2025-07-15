@@ -5,8 +5,8 @@ Environment=WEBDAV_CONFIG=/config.yaml
 # 端口映射
 PublishPort=6065:6065
 # 卷挂载
-Volume=/mnt/user/data/www/webdav:/srv:Z
-Volume=/mnt/user/data/appdata/webdav/config.yaml:/config.yaml:Z
+Volume=/data/www/webdav:/srv:Z
+Volume=/data/appdata/webdav/config.yaml:/config.yaml:Z
 
 [Service]
 # 重启策略

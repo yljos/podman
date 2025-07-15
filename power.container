@@ -10,7 +10,7 @@ Environment=TZ=Asia/Shanghai
 # 端口映射
 PublishPort=5008:5008
 # 卷挂载 - 修正 SELinux 标签
-Volume=/mnt/user/data/www:/usr/src/myapp:z
+Volume=/data/www:/usr/src/myapp:z
 # 启动命令 - 使用启动脚本
 Exec=/usr/src/myapp/start.sh
 

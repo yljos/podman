@@ -7,9 +7,9 @@ Environment=TZ=Asia/Shanghai
 # 端口映射
 PublishPort=8002:8002
 # 卷挂载
-Volume=/mnt/user/data/Downloads/media/Music:/app/media:Z
-Volume=/mnt/user/data/appdata/music_tag_web:/app/data:Z
-Volume=/mnt/user/data/appdata/music_tag_web/ffmpeg/bin:/app/data/bin:Z
+Volume=/data/Downloads/media/Music:/app/media:Z
+Volume=/data/appdata/music_tag_web:/app/data:Z
+Volume=/data/appdata/music_tag_web/ffmpeg/bin:/app/data/bin:Z
 # 自定义启动命令（如果需要）
 # Exec=/start
 

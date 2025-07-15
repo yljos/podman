@@ -8,8 +8,8 @@ Environment=TZ=Asia/Shanghai
 PublishPort=8096:8096
 PublishPort=7359:7359/udp
 # 卷挂载
-Volume=/mnt/user/data/appdata/emby:/config:Z
-Volume=/mnt/user/data/Downloads/media:/data:z
+Volume=/data/appdata/emby:/config:Z
+Volume=/data/Downloads/media:/data:z
 # 设备映射（用于硬件加速）
 AddDevice=/dev/dri:/dev/dri
 

@@ -7,7 +7,7 @@ Environment=TZ=Asia/Shanghai
 # 端口映射
 PublishPort=8181:80
 # 卷挂载
-Volume=/mnt/user/data/appdata/vaultwarden:/data:Z
+Volume=/data/appdata/vaultwarden:/data:Z
 
 [Service]
 # 重启策略

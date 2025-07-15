@@ -9,9 +9,9 @@ Environment=CLI_ARGS=abc
 # 端口映射
 PublishPort=8081:8080
 # 卷挂载
-Volume=/mnt/user/data/appdata/calibre:/config:Z
-Volume=/mnt/user/data/books:/books:Z
-Volume=/mnt/user/data/epub:/epub:Z
+Volume=/data/appdata/calibre:/config:Z
+Volume=/data/books:/books:Z
+Volume=/data/epub:/epub:Z
 
 [Service]
 # 重启策略

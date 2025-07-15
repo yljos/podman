@@ -9,8 +9,8 @@ Environment=ALLOW_DIRECT_VNC=true
 PublishPort=5900:5900
 PublishPort=4000:4000
 # 卷挂载
-Volume=/mnt/user/data/appdata/tinymediamanager:/data:Z
-Volume=/mnt/user/data/Downloads/media:/media:Z
+Volume=/data/appdata/tinymediamanager:/data:Z
+Volume=/data/Downloads/media:/media:Z
 
 [Service]
 # 重启策略

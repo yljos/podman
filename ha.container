@@ -7,7 +7,7 @@ PublishPort=8123:8123
 PublishPort=1900:1900/udp
 PublishPort=5353:5353/udp
 # 卷挂载
-Volume=/mnt/user/data/appdata/homeassistant:/config:Z
+Volume=/data/appdata/homeassistant:/config:Z
 Volume=/etc/localtime:/etc/localtime:ro
 # D-Bus集成，用于系统硬件访问和蓝牙支持
 # Volume=/run/dbus:/run/dbus:ro

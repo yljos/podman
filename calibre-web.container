@@ -9,8 +9,8 @@ Environment=OAUTHLIB_RELAX_TOKEN_SCOPE=1
 # 端口映射
 PublishPort=8083:8083
 # 卷挂载
-Volume=/mnt/user/data/appdata/calibre-web:/config:Z
-Volume=/mnt/user/data/books:/books:Z
+Volume=/data/appdata/calibre-web:/config:Z
+Volume=/data/books:/books:Z
 
 [Service]
 # 重启策略
