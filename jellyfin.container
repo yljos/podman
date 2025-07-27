@@ -1,15 +1,15 @@
+
 [Container]
-Image=docker.io/emby/embyserver:latest
+Image=docker.io/jellyfin/jellyfin:latest
 # 环境变量
 Environment=PUID=1000
 Environment=PGID=1000
 Environment=TZ=Asia/Shanghai
 # 端口映射
-PublishPort=8097:8096
-PublishPort=7359:7359/udp
+PublishPort=8096:8096
 # 卷挂载
-Volume=/data/appdata/emby:/config:Z
-Volume=/data/Downloads/media:/data:z
+Volume=/data/appdata/jellyfin:/config:Z
+Volume=/data/Downloads/media:/media:z
 # 设备映射（用于硬件加速）
 AddDevice=/dev/dri:/dev/dri
 
