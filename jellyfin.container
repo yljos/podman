@@ -1,12 +1,12 @@
 
 [Container]
-Image=docker.io/jellyfin/jellyfin:latest
+Image=docker.io/linuxserver/jellyfin:latest
 # 环境变量
 Environment=PUID=1000
 Environment=PGID=1000
 Environment=TZ=Asia/Shanghai
 # 端口映射
-PublishPort=8096:8096
+PublishPort=8097:8096
 # 卷挂载
 Volume=/data/appdata/jellyfin:/config:Z
 Volume=/data/Downloads/media:/media:z
