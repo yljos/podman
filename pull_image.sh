@@ -5,7 +5,8 @@ podman ps --format "{{.Image}} {{.Names}}" | while read image name; do
     echo "拉取镜像: $image"
     podman image pull "$image"
     echo "重启容器: $name"
-    systemctl --user restart "$name"
+    clean_name="${name#systemd-}"
+    systemctl --user restart "$clean_name"
 done
 
 # 2. 清理无用镜像
